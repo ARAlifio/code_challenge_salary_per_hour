@@ -5,12 +5,12 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-DATABASE_URI = 'mysql+pymysql://aralifio:Vwaffe123@localhost/salary_analysis'
+DATABASE_URI = 'mysql+pymysql://username:password@localhost/salary_analysis'
 engine = create_engine(DATABASE_URI)
 
 try:
-    employees_df = pd.read_csv("C:/Users/poisa/Downloads/employees.csv")
-    timesheets_df = pd.read_csv("C:/Users/poisa/Downloads/timesheets.csv")
+    employees_df = pd.read_csv("path/to/employees.csv")
+    timesheets_df = pd.read_csv("path/to/timesheets.csv")
     logging.info("CSV files loaded successfully.")
 except Exception as e:
     logging.error("Error loading CSV files: %s", e)
